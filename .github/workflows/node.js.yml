@@ -24,8 +24,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run : cd React/kinetograpp-react
-    - run: npm install
-    - run: npm ci
-    - run: npm test
+    - run: npm --prefix React/kinetograpp-react/ install
+    - run: npm --prefix React/kinetograpp-react/ ci
+    - run: npm --prefix React/kinetograpp-react/ test
       
