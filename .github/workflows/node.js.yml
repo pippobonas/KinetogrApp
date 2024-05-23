@@ -21,10 +21,12 @@ jobs:
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
+      env: 
+        FOLDER: React/kinetograpp-react/
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm --prefix React/kinetograpp-react/ install
-    - run: npm --prefix React/kinetograpp-react/ ci
-    - run: npm --prefix React/kinetograpp-react/ test
+    - run: npm install
+    - run: npm ci
+    - run: npm test
       
