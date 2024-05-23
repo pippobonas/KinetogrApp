@@ -26,8 +26,8 @@ jobs:
         cache: 'npm'
     
     - run: npm install
-      working-directory: React/kinetograpp-react
+      working-directory: KinetogrApp/React/kinetograpp-react
     - run: npm ci
-      working-directory: React/kinetograpp-react
+      working-directory: KinetogrApp/React/kinetograpp-react
     - run: npm test
-      working-directory: React/kinetograpp-react
+      working-directory: KinetogrApp/React/kinetograpp-react
