@@ -52,3 +52,18 @@ test('renders ShowMoviesList for "/" route', async () => {
     expect(screen.getByText(/Movie 2/i)).toBeInTheDocument();
   });
 });
+
+// Inizializza MemoryRouter alla rotta /searchMovie
+test('renders SearchMovie for "/searchMovie" route', async () => {
+  render(
+    <MemoryRouter initialEntries={['/searchMovie']}>
+      <App />
+    </MemoryRouter>
+  );
+
+  // Attesa rendering elementi di test
+  await waitFor(() => {
+    expect(screen.getByText(/Ricerca Film per Titolo/i)).toBeInTheDocument();
+    expect(screen.getByText(/Inserisci il titolo del film/i)).toBeInTheDocument();
+  });
+});
