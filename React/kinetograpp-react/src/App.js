@@ -1,6 +1,13 @@
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+
+import ShowMoviesList from './components/ShowMoviesList';
+
 function App() {
   return (
-    <h1>Placeholder App component</h1>
+    <Routes>
+      <Route path="/" element={<ShowMoviesList />} />
+    </Routes>
   );
 }
 
