@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../CSS/movies-list-style.css'
+
 function RenderMoviesList({ movies }) {
   return (
     <div>
