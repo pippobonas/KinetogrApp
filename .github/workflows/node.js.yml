@@ -24,10 +24,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    
+    - run : cd React/kinetograpp-react
     - run: npm install
-      working-directory: KinetogrApp/React/kinetograpp-react
     - run: npm ci
-      working-directory: KinetogrApp/React/kinetograpp-react
     - run: npm test
-      working-directory: KinetogrApp/React/kinetograpp-react
+      
