@@ -1,9 +1,15 @@
+'''defined the module movie_list'''
 from flask import jsonify
 from flaskr.movie_model import Movie
 
 def movie_list():
+    '''
+    this function is used to get all movies from the database
+    require a get request
+    return: a json with all movies
+    '''
     movies = Movie.query.all()
-    if(not movies):
+    if not movies:
         return jsonify({"Errore": "nessun film trovato"}), 400
     movies_list = [
         {
