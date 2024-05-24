@@ -1,9 +1,14 @@
+'''defined the module movie_search'''
 from flask import jsonify, request
 from flaskr.movie_model import Movie
 
 # API endpoint per la ricerca per titolo
 
 def movie_search():
+    '''
+    this function is used to search a movie by title
+    require a post request with a json in the body
+    '''
     data = request.json  # Assuming the data is sent as JSON in the request body
 
     if 'title' not in data:
