@@ -10,12 +10,13 @@ def movie_routes(app):
     - /moviesList
     - /searchMovie
     '''
+    #route /moviesList
     CORS(app, resources={r"/moviesList": {"origins": "http://localhost:3000"}})
     @app.route('/moviesList')
-    def moviesList():
+    def route_search_movies_list():
         return movie_list()
-    
+    #route /searchMovie
     CORS(app, resources={r"/searchMovie": {"origins": "http://localhost:3000"}})
     @app.route('/searchMovie', methods=['POST'])
-    def searchMovie():
+    def route_search_movie():
         return movie_search()
