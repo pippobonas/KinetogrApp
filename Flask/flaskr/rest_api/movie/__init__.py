@@ -1,9 +1,15 @@
+'''this method is used to define the routes for the movie module'''
 from flask_cors import CORS
-from flaskr.API.movie.movie_list import movie_list
-from flaskr.API.movie.movie_search import movie_search
+from flaskr.rest_api.movie.movie_list import movie_list
+from flaskr.rest_api.movie.movie_search import movie_search
 
 def movie_routes(app):
-
+    '''
+    The routes are only available from localhost
+    Defined the routes:
+    - /moviesList
+    - /searchMovie
+    '''
     CORS(app, resources={r"/moviesList": {"origins": "http://localhost:3000"}})
     @app.route('/moviesList')
     def moviesList():
