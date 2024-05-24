@@ -5,10 +5,10 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import pytest
 from flaskr.app import create_app
-from configtest import TestConfig as conf
+from tests.configtest import TestConfig as conf
 
 
-class Test_create_app:
+class TestCreateApp:
     '''
     class for testing create_app function
     '''
