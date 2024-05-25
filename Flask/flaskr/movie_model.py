@@ -23,3 +23,28 @@ class Movie(db.Model):
     release_year = db.Column(db.Integer, nullable=False)
     poster_path = db.Column(db.String(4096))
     services_available = db.Column(db.String(64), nullable=False)
+
+    def __repr__(self):
+        '''rappresentation of the object used for debugging '''
+        temp_repr = ['Movie(' +
+        'id={self.id}' +
+        'title={self.title}' +
+        'director={self.director}' +
+        'plot={self.plot}' +
+        'release_year={self.release_year}' +
+        'poster_path={self.poster_path}' +
+        'services_available={self.services_available}' +
+        ')']
+        return temp_repr[0]
+    def __str__(self):
+        '''rappresentation of the object used for printing '''
+        temp_str = ['Movie(\n' +
+        'id={self.id}\n' +
+        'title={self.title}\n' +
+        'director={self.director}\n' +
+        'plot={self.plot}\n' +
+        'release_year={self.release_year}\n' +
+        'poster_path={self.poster_path}\n' +
+        'services_available={self.services_available}\n' +
+        ')']
+        return temp_str[0]
