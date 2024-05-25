@@ -18,6 +18,7 @@ def create_app(config,db,migrate):
         app.config.from_object(config)
     else:
         app.config['TESTING'] = False
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///KinetogrApp.db?charset=utf8'
         app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
         app.config['WTF_CSRF_ENABLED'] = False
     if db is not None:
