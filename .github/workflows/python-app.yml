@@ -28,7 +28,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint pytest coverage
         if [ -f Flask/requirements.txt ]; then pip install -r Flask/requirements.txt; fi
-        if [ -f Flask/requirements_dev.txt ]; then pip install -r requirements_dev.txt; fi
+        if [ -f Flask/requirements_dev.txt ]; then pip install -r Flask/requirements_dev.txt; fi
     - name: Lint with pylint
       run: pylint $(git ls-files '*.py')
     - name: Test with pytest
